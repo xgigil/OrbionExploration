@@ -29,5 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
         revealOnScroll();
         handleHeaderScroll();
     });
-    revealOnScroll();
 });
+
+document.getElementById("application-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    alert("Application Submitted Successfully!");
+    setTimeout(() => {
+        window.location.href = "index.html";
+    }, 1000);
+});
+
+

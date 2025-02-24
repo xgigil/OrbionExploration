@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply to Orbion</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>
+            <img src="images/orbion.png" alt="orbion logo" class="orbion-logo"> Application Form
+        </h1>
+    </header>
+ 
+    <form id="application-form">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" required>
+        
+        <label for="education">Highest Education Level:</label>
+        <select id="education" required>
+            <option value="">Select</option>
+            <option value="highschool">High School</option>
+            <option value="bachelor">Bachelor's Degree</option>
+            <option value="master">Master's Degree</option>
+            <option value="phd">PhD</option>
+        </select>
+        
+        <label for="experience">Relevant Experience (if any):</label>
+        <textarea id="experience"></textarea>
+        
+        <label for="reason">Why do you want to join?</label>
+        <textarea id="reason" required></textarea>
+        
+        <label for="cv">Upload Resume/CV:</label>
+        <input type="file" id="cv" required>
+        
+        <button type="submit">Apply</button>
+    </form>
+    
+    <footer>
+        <a href="index.html" class="btn">Back to Home</a>
+    </footer>
+</body>
+</html>

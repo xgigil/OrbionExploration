@@ -1,8 +1,12 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #FCE4EC;
+    background: linear-gradient(#A56B9D, #FCE4EC);
     color: #5E3A79;
     text-align: center;
     scroll-behavior: smooth;
@@ -71,11 +75,15 @@ nav {
     width: 100%;
     background: rgba(255, 255, 255, 0.8);
     transition: background 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin-left: 350px;
 }
 
 nav ul li {
@@ -88,9 +96,26 @@ nav ul li a {
     font-weight: bold;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
+    display: inline-block;
+    position: relative;
 }
 
-nav ul li a:hover {
+nav ul li a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #A56B9D;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
     color: #A56B9D;
 }
 
@@ -98,6 +123,8 @@ section {
     background: rgba(252, 228, 236, 0.9);
     padding: 50px;
     text-align: center;
+    border-bottom: 3px solid rgba(173, 116, 179, 0.3); /* Soft border between transitions */
+    transition: all 0.5s ease-in-out;
 }
 
 .scrolled .hero {
@@ -111,6 +138,11 @@ form {
     width: 50%;
     margin: auto;
 }
+
+#message {
+    resize: vertical;
+}
+
 
 input, textarea {
     margin: 10px 0;
@@ -170,10 +202,6 @@ h1, h2 {
 a {
     color: #DDA0DD;
     text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 .container {
@@ -242,4 +270,50 @@ a:hover {
 .image-item:hover img {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#application-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+.orbion-logo {
+    width: 40px;
+    height: auto;
+    vertical-align: middle; 
+    margin-right: 10px; 
+    border-radius: 50%;
+    object-fit: cover; 
+}
+
+.nav-logo {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-left: 150px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
+    padding: 5px;
+    margin-right: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.search-box button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
 }
