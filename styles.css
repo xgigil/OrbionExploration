@@ -14,7 +14,7 @@ body {
 
 .hero {
     background-image: url("images/spaceGIF.gif");
-    image-rendering: optimizeQuality;
+    image-rendering:-moz-crisp-edges;
     background-size: cover;
     padding: 10px 0 40px 0;
     background-position: center;
